@@ -110,7 +110,10 @@ WordBinTree* buildTree(void){
 
 
 void printTree(WordBinNode* root){
-    if(root!=NULL){
+    if(root!=NULL) {
 
+        printf("%s[%d]\n", root->string, root->count);
+        printTree(root->left);
+        printTree(root->right);
     }
 }

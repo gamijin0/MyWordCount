@@ -13,4 +13,6 @@ int main(){
     addNode(tree,"Hello");
     addNode(tree,"Hell");
 
+    printTree(tree->root);
+
 }
