@@ -19,7 +19,7 @@ int addNode(WordBinTree *tree,char* string){
         WordBinNode *newNode;
         if((newNode =malloc(sizeof(WordBinNode)))!=NULL){
             //内存中分配一个新的node
-            newNode->count=0;
+            newNode->count=1;
             newNode->left=NULL;
             newNode->right=NULL;
             if((newNode->string=(char*)malloc(((strlen(string) + 1)*sizeof(char)))) == NULL ) {
@@ -67,7 +67,7 @@ int addNode(WordBinTree *tree,char* string){
             WordBinNode *newNode;
             if((newNode =malloc(sizeof(WordBinNode)))!=NULL){
                 //内存中分配一个新的node
-                newNode->count=0;
+                newNode->count=1;
                 newNode->left=NULL;
                 newNode->right=NULL;
                 if((newNode->string=(char*)malloc((strlen(string) + 1)*sizeof(char))) == NULL ) {
@@ -111,8 +111,7 @@ WordBinTree* buildTree(void){
 
 void printTree(WordBinNode* root){
     if(root!=NULL) {
-
-        printf("%s[%d]\n", root->string, root->count);
+        printf("\n%s[%d]", root->string, root->count);
         printTree(root->left);
         printTree(root->right);
     }
